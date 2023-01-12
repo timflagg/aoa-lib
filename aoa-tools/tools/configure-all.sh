@@ -25,5 +25,5 @@ fi
 for i in $(ls ../environment | sort -n); do 
   echo "starting ${i}"
   # deploy aoa wave
-  ./configure-wave.sh ${i} ${environment_overlay} ${cluster_context} ${github_username} ${repo_name} ${target_branch}
+  ./configure-wave.sh ${environment_name} ${i} ${environment_overlay} ${cluster_context} ${github_username} ${repo_name} ${target_branch}
 done

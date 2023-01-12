@@ -1,12 +1,21 @@
 #!/bin/bash
 #set -e
 
-wave_name=${1:-""}
-environment_overlay=${2:-""} # prod, dev, base
-cluster_context=${3:-""}
-github_username=${4:-""}
-repo_name=${5:-""}
-target_branch=${6:-""}
+environment_name=${1:-""}
+wave_name=${2:-""}
+environment_overlay=${3:-""} # prod, dev, base
+cluster_context=${4:-""}
+github_username=${5:-""}
+repo_name=${6:-""}
+target_branch=${7:-""}
+
+# check to see if environment name variable was passed through, if not prompt for it
+if [[ ${environment_name} == "" ]]
+  then
+    # provide environment name
+    echo "Please provide the environment name to use (i.e. prod, dev):"
+    read environment_name
+fi
 
 # check to see if wave name variable was passed through, if not prompt for it
 if [[ ${wave_name} == "" ]]
@@ -69,7 +78,7 @@ spec:
   source:
     repoURL: https://github.com/${github_username}/${repo_name}/
     targetRevision: ${target_branch}
-    path: aoa-mgmt/${wave_name}/${environment_overlay}/active/
+    path: ${environment_name}/${wave_name}/${environment_overlay}/active/
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:

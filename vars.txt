@@ -5,8 +5,9 @@
 # rename your context if necessary
 
 license_key=${1:-""}
-environment_overlay=${2:-"m1"} # base, ilcm, m1
-cluster_context=${3:-mgmt}
-github_username=${4:-ably77}
-repo_name=${5:-aoa-lib}
-target_branch=${6:-HEAD}
+environment_name=${2:-"aoa-mgmt"}
+environment_overlay=${3:-"m1"} # base, ilcm, m1
+cluster_context=${4:-mgmt}
+github_username=${5:-ably77}
+repo_name=${6:-aoa-lib}
+target_branch=${7:-HEAD}
