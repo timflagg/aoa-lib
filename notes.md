@@ -5,3 +5,6 @@
 
 # single cluster freestyle
 ./aoa-tools/deploy.sh $GM_LICENSE_KEY 2.1.2 single-cluster-freestyle m1 mgmt mgmt ably77 aoa-lib HEAD
+
+# single cluster httpbin
+./aoa-tools/deploy.sh $GM_LICENSE_KEY 2.1.2 single-cluster-httpbin m1 mgmt mgmt ably77 aoa-lib HEAD
