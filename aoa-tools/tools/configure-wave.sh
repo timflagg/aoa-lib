@@ -78,7 +78,7 @@ spec:
   source:
     repoURL: https://github.com/${github_username}/${repo_name}/
     targetRevision: ${target_branch}
-    path: ${environment_name}/${wave_name}/${environment_overlay}/active/
+    path: environments/${environment_name}/${wave_name}/${environment_overlay}/active/
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
