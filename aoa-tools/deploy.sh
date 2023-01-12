@@ -1,7 +1,7 @@
 #!/bin/bash
 #set -e
 
-vars_file=$1
+export vars_file=$1
 
 # check to see if environment name variable was passed through, if not prompt for it
 if [[ ${vars_file} == "" ]]

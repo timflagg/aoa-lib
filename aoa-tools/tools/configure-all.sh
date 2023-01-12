@@ -3,7 +3,7 @@
 
 # source vars from root directory vars.txt
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-source $SCRIPT_DIR/../vars.txt
+source $SCRIPT_DIR/../${vars_file}
 
 # check to see if cluster context variable was passed through, if not prompt for it
 if [[ ${cluster_context} == "" ]]
