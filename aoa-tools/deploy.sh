@@ -12,7 +12,7 @@
 #
 #cd "$( dirname -- "$SCRIPT_DIR"; )" > '/dev/null';
 SCRIPT_DIR="$( pwd; )/aoa-tools";
-popd  > '/dev/null';
+#popd  > '/dev/null';
 
 # source vars from root directory vars.txt
 PARENT_DIR="$(dirname "$SCRIPT_DIR")"
