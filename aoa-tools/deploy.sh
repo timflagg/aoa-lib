@@ -1,6 +1,16 @@
 #!/bin/bash
 #set -e
 
+vars_file=$1
+
+# check to see if environment name variable was passed through, if not prompt for it
+if [[ ${vars_file} == "" ]]
+  then
+    # provide vars file
+    echo "Please provide the vars file to use (i.e. single-cluster-freestyle-vars.txt):"
+    read vars_file
+fi
+
 #pushd . > '/dev/null';
 #SCRIPT_DIR="${BASH_SOURCE[0]:-$0}";
 #
@@ -16,7 +26,7 @@ SCRIPT_DIR="$( pwd; )/aoa-tools";
 
 # source vars from root directory vars.txt
 PARENT_DIR="$(dirname "$SCRIPT_DIR")"
-source $PARENT_DIR/vars.txt && export $(sed '/^#/d' $PARENT_DIR/vars.txt | cut -d= -f1)
+source $PARENT_DIR/${vars_file} && export $(sed '/^#/d' $PARENT_DIR/${vars_file} | cut -d= -f1)
 
 # check to see if defined contexts exist
 if [[ $(kubectl config get-contexts | grep ${cluster_context}) == "" ]] ; then

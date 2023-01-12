@@ -6,7 +6,7 @@
 
 license_key=${1:-"$GM_LICENSE_KEY"}
 gloo_mesh_version=${2:-"2.1.2"}
-environment_name=${3:-"multicluster/aoa-mgmt"}
+environment_name=${3:-"single-cluster-freestyle"}
 environment_overlay=${4:-"m1"} # base, ilcm, m1
 cluster_context=${5:-mgmt}
 mgmt_context=${6:-mgmt}
