@@ -5,8 +5,6 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - gloo-edge-ee-nofed.yaml
-- gloo-portal-helm.yaml
-- gloo-portal-ns.yaml
 - gloo-system-ns.yaml
 - okta-client-secret.yaml
 - upstream-tls.yaml

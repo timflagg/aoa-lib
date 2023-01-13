@@ -4,7 +4,7 @@
 # please use `kubectl config rename-contexts <current_context> <target_context>` to
 # rename your context if necessary
 
-license_key=${1:-"$LICENSE_KEY"}
+license_key=${1:-"<LICENSE_KEY>"}
 environment_name=${2:-"gloo-edge-portal"}
 environment_overlay=${3:-"prod"} # base, ilcm, m1
 cluster_context=${4:-mgmt}
