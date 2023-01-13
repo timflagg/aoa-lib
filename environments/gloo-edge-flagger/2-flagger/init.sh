@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "wave description:"
-echo "httpbin deployment"
+echo "flagger deployment"
 
