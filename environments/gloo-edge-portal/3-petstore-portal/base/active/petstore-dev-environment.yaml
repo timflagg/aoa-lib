@@ -28,6 +28,28 @@ spec:
   - api-local.glootest.com
   gatewayConfig:
     disableRoutes: false
+    options:
+      cors:
+        allowCredentials: true
+        allowHeaders:
+        - api-key
+        - Authorization
+        - accept
+        - content-type
+        - referer
+        - user-agent
+        allowMethods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        allowOrigin:
+        - https://portal-local.glootest.com
+        # arbitrary portal generated vs host
+        - https://api-local.glootest.com
+        #allowOriginRegex:
+        #- 'https://[a-zA-Z0-9]*-local.glootest.com'
+        #- 'http://[a-zA-Z0-9]*-local.glootest.com'
     tls:
       config:
         secretRef:
@@ -35,7 +57,7 @@ spec:
           namespace: gloo-system
         sniDomains:
         - '*'
-      enabled: false
+      enabled: true
   parameters:
     usagePlans:
       basic:
