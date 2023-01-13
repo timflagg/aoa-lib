@@ -1,0 +1,13 @@
+# replace the parameter below with your designated cluster context
+# note that the character '_' is an invalid value
+#
+# please use `kubectl config rename-contexts <current_context> <target_context>` to
+# rename your context if necessary
+
+license_key=${1:-""}
+environment_name=${2:-"gloo-edge-portal"}
+environment_overlay=${3:-"base"} # base, ilcm, m1
+cluster_context=${4:-mgmt}
+github_username=${5:-ably77}
+repo_name=${6:-aoa-lib}
+target_branch=${7:-HEAD}
