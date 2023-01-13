@@ -13,7 +13,7 @@ echo "$(kubectl -n gloo-system get service gateway-proxy -o jsonpath='{.status.l
 echo "EOF"
 echo
 echo "access argocd at https://argocd-local.glootest.com/argo"
-echo "access the Petstore Portal application at: http://portal-local.glootest.com"
+echo "access the Petstore Portal application at: https://portal-local.glootest.com"
 echo
 echo "Method 2: use port-forwarding"
 echo "alternatively, access argocd using port-forward command:" 
