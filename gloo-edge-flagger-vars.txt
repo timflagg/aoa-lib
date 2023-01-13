@@ -4,9 +4,9 @@
 # please use `kubectl config rename-contexts <current_context> <target_context>` to
 # rename your context if necessary
 
-license_key=${1:-"eyJhZGRPbnMiOiJncmFwaHFsIiwiZXhwIjoxODI1Mjg2NDAwLCJpYXQiOjE2Njc1MjAwMDAsImsiOiJjaEtUS0EiLCJsdCI6ImVudCIsInByb2R1Y3QiOiJnbG9vIn0.fySOwZ7YHopE1tmjzmf8_A75IXDld3-UCf8XSZIbQH0"}
+license_key=${1:-""}
 environment_name=${2:-"gloo-edge-flagger"}
-environment_overlay=${3:-"m1"} # base, ilcm, m1
+environment_overlay=${3:-"base"} # base, ilcm, m1
 cluster_context=${4:-mgmt}
 github_username=${5:-ably77}
 repo_name=${6:-aoa-lib}
