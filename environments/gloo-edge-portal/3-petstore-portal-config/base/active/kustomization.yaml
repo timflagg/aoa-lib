@@ -13,6 +13,4 @@ resources:
 - petstore-apidoc-v2-full.yaml
 - petstore-apiproduct.yaml
 - petstore-dev-environment.yaml
-- petstore-v1.yaml
-- petstore-v2.yaml
 - staticpage-faq.yaml
