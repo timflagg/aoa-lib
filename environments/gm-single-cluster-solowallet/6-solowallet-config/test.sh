@@ -1,16 +1,32 @@
 #!/bin/bash
 
-# echo port-forward commands
 echo 
-echo "access argocd dashboard:"
-echo "kubectl port-forward svc/argocd-server -n argocd 9999:443 --context ${cluster_context}"
+echo "installation complete:"
 echo
-echo "navigate to http://localhost:9999/argo in your browser for argocd"
+echo "To access argocd dashboard, follow the methods below:"
+echo 
+echo "Method 1: modify /etc/hosts on your local machine (this will require sudo privileges)"
+echo "cat <<EOF | sudo tee -a /etc/hosts"
+echo "$(kubectl -n gloo-system get service gateway-proxy -o jsonpath='{.status.loadBalancer.ingress[0].ip}') argocd-local.glootest.com gmui-local.glootest.com bank-local.glootest.com"
+echo "EOF"
 echo
-echo "username: admin"
+echo "access argocd at https://argocd-local.glootest.com/argo"
+echo "access Gloo Mesh UI at https://gmui-local.glootest.com"
+echo "access the bank application at: https://bank-local.glootest.com"
+echo
+echo "Method 2: use port-forwarding"
+echo "alternatively, access argocd using port-forward command:" 
+echo "kubectl port-forward svc/argocd-server -n argocd 9999:443"
+echo
+echo "argocd credentials:"
+echo "user: admin"
 echo "password: solo.io"
-echo 
-echo "access gloo-mesh dashboard:"
-echo "kubectl port-forward -n gloo-mesh svc/gloo-mesh-ui 8090 --context ${cluster_context}"
 echo
-echo "navigate to http://localhost:8090 in your browser for the gloo mesh ui"
+echo "access argocd at https://localhost:9999/argo"
+echo 
+echo
+echo "access gloo mesh ui using port-forward command:" 
+echo "kubectl port-forward -n gloo-mesh svc/gloo-mesh-ui 8090 --context mgmt"
+echo
+echo "access gloo mesh ui at https://localhost:8090"
+echo 
