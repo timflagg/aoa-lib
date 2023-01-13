@@ -7,11 +7,12 @@ echo "To access argocd dashboard, follow the methods below:"
 echo 
 echo "Method 1: modify /etc/hosts on your local machine (this will require sudo privileges)"
 echo "cat <<EOF | sudo tee -a /etc/hosts"
-echo "$(kubectl -n gloo-system get service gateway-proxy -o jsonpath='{.status.loadBalancer.ingress[0].ip}') argocd-local.glootest.com gmui-local.glootest.com httpbin-local.glootest.com"
+echo "$(kubectl -n gloo-system get service gateway-proxy -o jsonpath='{.status.loadBalancer.ingress[0].ip}') argocd-local.glootest.com gmui-local.glootest.com bookinfo-local.glootest.com httpbin-local.glootest.com"
 echo "EOF"
 echo
 echo "access argocd at https://argocd-local.glootest.com/argo"
 echo "access Gloo Mesh UI at https://gmui-local.glootest.com"
+echo "access the httpbin application at: https://bookinfo-local.glootest.com/productpage"
 echo "access the httpbin application at: https://httpbin-local.glootest.com/get"
 echo
 echo "Method 2: use port-forwarding"
