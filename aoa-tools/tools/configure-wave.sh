@@ -1,13 +1,17 @@
 #!/bin/bash
 #set -e
 
-environment_name=${1:-""}
-wave_name=${2:-""}
-environment_overlay=${3:-""} # prod, dev, base
-cluster_context=${4:-""}
-github_username=${5:-""}
-repo_name=${6:-""}
-target_branch=${7:-""}
+#environment_name=${1:-""}
+#wave_name=${2:-""}
+#environment_overlay=${3:-""} # prod, dev, base
+#cluster_context=${4:-""}
+#github_username=${5:-""}
+#repo_name=${6:-""}
+#target_branch=${7:-""}
+
+# source vars from root directory vars.txt
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+source $SCRIPT_DIR/../../${vars_file}
 
 # check to see if environment name variable was passed through, if not prompt for it
 if [[ ${environment_name} == "" ]]
