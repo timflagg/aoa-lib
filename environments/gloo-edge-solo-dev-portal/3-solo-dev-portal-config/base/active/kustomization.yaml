@@ -9,7 +9,7 @@ resources:
 - dev-environment-internal.yaml
 - developer1-password.yaml
 - developer1-user.yaml
-- ecommerce-portal.yaml
+- solo-dev-portal.yaml
 - httpbin-apidoc-externalservice.yaml
 - httpbin-apidoc-githubfetch.yaml
 - httpbin-apiproduct-dev-external.yaml
