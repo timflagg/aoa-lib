@@ -6,7 +6,7 @@
 
 license_key=${1:-""}
 environment_name=${2:-"gloo-edge-solo-dev-portal"}
-environment_overlay=${3:-"base"} # base, ilcm, m1
+environment_overlay=${3:-"base"} # options: base
 cluster_context=${4:-mgmt}
 github_username=${5:-ably77}
 repo_name=${6:-aoa-lib}
