@@ -8,7 +8,6 @@ spec:
   - basePath: '{%version%}'
     names:
     - httpbin-api-dev-internal
-    - petstore-api-dev
     namespaces:
     - '*'
     usagePlans:
