@@ -15,7 +15,6 @@ resources:
 - httpbin-apiproduct-dev-external.yaml
 - httpbin-apiproduct-dev-internal.yaml
 - httpbin-static-upstream.yaml
-- httpbin-vs.yaml
 - oidc-group-dev.yaml
 - oidc-group-prod.yaml
 - petstore-apidoc-pets.yaml
