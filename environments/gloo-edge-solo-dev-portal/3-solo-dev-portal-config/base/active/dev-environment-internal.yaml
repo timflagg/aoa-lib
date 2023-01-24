@@ -28,7 +28,6 @@ spec:
   domains:
   # arbitrary portal generated vs host
   - devapi-local.glootest.com
-  - api-local.glootest.com
   #- httpbin-cluster1.kapoozi.com
   gatewayConfig:
     disableRoutes: false
@@ -51,7 +50,6 @@ spec:
         - https://portal-local.glootest.com
         # arbitrary portal generated vs host
         - https://devapi-local.glootest.com
-        - https://api-local.glootest.com
         #- https://httpbin-cluster1.kapoozi.com
         #allowOriginRegex:
         #- 'https://[a-zA-Z0-9]*-local.glootest.com'
