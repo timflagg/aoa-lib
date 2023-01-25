@@ -30,7 +30,7 @@ spec:
     name: faq
     navigationLinkName: FAQ
     path: /faq
-  tls:
-    secretRef:
-      name: upstream-tls
-      namespace: gloo-system
+  #tls:
+  #  secretRef:
+  #    name: upstream-tls
+  #    namespace: gloo-system
