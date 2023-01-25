@@ -56,7 +56,7 @@ spec:
           namespace: gloo-system
         sniDomains:
         - '*'
-      enabled: false
+      enabled: true
   parameters:
     usagePlans:
       basic:
