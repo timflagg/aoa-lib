@@ -43,4 +43,13 @@ spec:
               number: 8000
             subset:
               version: v2
-            weight: 50
+            weight: 25
+          - ref:
+              name: httpbin-vd
+              namespace: httpbin
+            kind: VIRTUAL_DESTINATION
+            port:
+              number: 8000
+            subset:
+              version: v3
+            weight: 25
