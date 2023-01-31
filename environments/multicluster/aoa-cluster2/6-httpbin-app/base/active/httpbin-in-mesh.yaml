@@ -26,49 +26,22 @@ metadata:
   name: in-mesh
   namespace: httpbin
   labels:
+    version: v3
     app: in-mesh
-    version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: in-mesh
-      version: v1
+      version: v3
   template:
     metadata:
       labels:
         app: in-mesh
-        version: v1
+        version: v3
         istio.io/rev: 1-15
-    spec:
-      serviceAccountName: in-mesh
-      containers:
-      - image: docker.io/kennethreitz/httpbin
-        imagePullPolicy: IfNotPresent
-        name: in-mesh
-        ports:
-        - containerPort: 80
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: in-mesh-canary
-  namespace: httpbin
-  labels:
-    app: in-mesh
-    version: v2
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: in-mesh
-      version: v2
-  template:
-    metadata:
-      labels:
-        app: in-mesh
-        version: v2
-        istio.io/rev: 1-15
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       serviceAccountName: in-mesh
       containers:

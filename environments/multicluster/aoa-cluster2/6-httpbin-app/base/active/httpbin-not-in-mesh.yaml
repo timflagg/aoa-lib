@@ -16,7 +16,7 @@ spec:
   ports:
   - name: http
     port: 8000
-    targetPort: 80
+    targetPort: 8000
   selector:
     app: not-in-mesh
 ---
@@ -43,4 +43,4 @@ spec:
         imagePullPolicy: IfNotPresent
         name: not-in-mesh
         ports:
-        - containerPort: 80
+        - containerPort: 8000
