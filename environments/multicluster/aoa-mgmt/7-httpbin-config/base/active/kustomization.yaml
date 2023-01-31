@@ -7,3 +7,5 @@ resources:
 - httpbin-team-config-ns.yaml
 - httpbin-workspace.yaml
 - httpbin-workspacesettings.yaml
+- httpbin-rt-443.yaml
+- httpbin-vd.yaml

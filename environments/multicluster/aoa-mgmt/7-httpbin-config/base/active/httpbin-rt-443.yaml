@@ -15,9 +15,6 @@ spec:
   workloadSelectors: []
   http:
     - name: httpbin
-      labels:
-        oauth: "true"
-        waf: "true"
       matchers:
       - uri:
           exact: /get
@@ -29,8 +26,21 @@ spec:
           prefix: /anything
       forwardTo:
         destinations:
-        - ref:
-            name: in-mesh
-            namespace: httpbin
-          port:
-            number: 8000
+          - ref:
+              name: httpbin-vd
+              namespace: httpbin
+            kind: VIRTUAL_DESTINATION
+            port:
+              number: 8000
+            subset:
+              version: v1
+            weight: 50
+          - ref:
+              name: httpbin-vd
+              namespace: httpbin
+            kind: VIRTUAL_DESTINATION
+            port:
+              number: 8000
+            subset:
+              version: v2
+            weight: 50
