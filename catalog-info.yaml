@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: aoa-lib
+  description: |
+    aoa-lib is an example of a gitops approach leveraging the app-of-apps pattern in argocd
+  links:
+    - title: Website
+      url: https://github.com/ably77/aoa-lib
+    - title: Documentation
+      url: https://github.com/ably77/aoa-lib
+  annotations:
+    github.com/project-slug: ably77/aoa-lib
+    backstage.io/techdocs-ref: dir:.
+    lighthouse.com/website-url: https://github.com/ably77/aoa-lib
+spec:
+  type: library
+  owner: ly
+  lifecycle: experimental
